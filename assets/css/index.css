@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* Declaración de variables a utilizar */
+:root{
+--primary-color: #0A871E;
+--primary-dark:#085748;
+--second-color: #FFFFFF;
+--dark-color:#030620;
+--font-bold: 900;
+--font-semibold:600;
+--font-regular:400;
+--font-italic:italic;
+}
+/* Resetea algunos estilos por defecto */
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+html{
+  font-size: 16px;
+}
+header{
+  background-image: url('../img/FondoIndexMobile.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+.subtitle{
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+}
+
+.container-img-condor{
+  position: absolute;
+  bottom: 100px;
+  right: 5%;
+  &:hover{
+    p{
+     display: block;
+   }
+ }
+}
+.img-condor{
+  width: 80px;
+}
+.container-img-condor .info-condor{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 70%;
+  right: 50%;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.container-img-condor p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 120%;
+  left: 0%;
+  font-size: 14px;
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+.container-img-oso{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  &:hover{
+     p{
+      display: block;
+    }
+  }
+}
+.img-oso{
+  width: 120px;
+}
+.container-img-oso .info-oso{
+  color: var(--second-color);
+  font-size: .8rem;
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.container-img-oso p{
+  color: var(--second-color);
+  font-weight: var(--font-semibold);
+  position: absolute;
+  top: 50%;
+  right: -220px;
+  font-size: 14px;
+  display: none;
+}
+.nav-menu{
+  width: 50%;
+  background-image: url('../img/background-image.svg');
+  background-size: cover;
+  height: 220px;
+  border-radius:  0 0 .5rem ;
+  overflow: hidden;
+  z-index: 10;
+  position: relative;
+} 
+.nav-menu .menu-list{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.menu-list li a{
+  color: var(--second-color);
+  
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.nav-menu .closeMenu{
+  position: absolute;
+  top: .2rem;
+  right: .3rem;
+  font-size: 2rem;
+  color: var(--second-color);
+}
+ .container-IconMenu{
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  background-color:#0a871f8b;
+  border-radius: .1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuIcon{
+  color: var(--second-color);
+  font-size: 2rem;
+  font-weight:var(--font-bold);
+}
+header h1{
+  position:absolute;
+  top: 2.5rem;
+  color: var(--second-color);
+  text-align: center;
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  z-index: 9;
+}
+main{
+  padding: 1rem;
+}
+
+.colombia h2 span{
+  color: var(--primary-dark);
+  font-size: 1.7rem;
+ 
+}
+.colombia p{
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  font-weight: var(--font-semibold);
+}
+.colombia p span{
+  color: var(--primary-color);
+}
+
+.colombia .img-container{
+  width: 100%;
+  margin: 1rem 0;
+  position: relative;
+}
+.colombia .img-container img{
+  width: 100%;
+  height: 250px;
+  border-radius: .5rem;
+}
+.colombia .img-container p{
+  font-weight: var(--font-semibold);
+}
+.colombia .img-container span{
+  font-style: italic;
+  color: var(--dark-color);
+}
+.colombia .img-container .info{
+  color: var(--second-color);
+  position: absolute;
+ bottom: 75%;
+  left: .5rem;
+}
+
+@media(width > 359px) and (width < 720px){
+  .container-img-condor{
+    position: absolute;
+    right: 17%;
+  } 
+  .img-condor{
+    width: 90px;
+  }
+
+}
+@media  (width > 720px) and (width < 1240px) {
+  body{
+    margin: auto;
+  }
+  header{
+    background-image: url('../img/FondoIndexDesktop.jpg');
+    height: 50vh;
+  } 
+  .container-img-condor{
+    bottom: 50%;
+    right: 10%;
+  } 
+
+  .container-img-oso .info-oso{
+    font-size: 1.2rem;
+    right: 45%;
+  }
+
+  .container-img-condor .info-condor{
+    font-size: 1rem; 
+  }
+  .container-img-condor p{
+    font-size: 1.4rem;
+  }
+
+ .img-condor{
+    width: 200px;
+  }
+
+ .img-oso{
+    width: 280px;
+  }
+  .container-img-oso p{
+    font-size: 1.3rem;
+    top: -15%;
+    right: -120px;
+  }
+  .nav-menu{
+    width: 100%;
+    margin: auto;
+    background:none;
+    height:70px;
+    background-image: linear-gradient(#0101019f , #05050500  );
+  } 
+  .nav-menu .menu-list{
+    width: 80%;
+    margin-inline: auto;
+    flex-direction: row;
+    border-bottom: 2px solid var(--second-color);
+  }
+  .menu-list li a{
+    font-size: 20px;
+    font-weight: var(--font-semibold);
+  }
+  .nav-menu .closeMenu{
+    display: none;
+    visibility: hidden;
+  }
+   .container-IconMenu{
+   display: none;
+   visibility: hidden;
+  }
+  header h1{
+    width: 70%;
+    top: 6rem;
+    text-align: left;
+    font-size: 24px;
+    padding-left: 1rem;
+  }
+}
+
+
+@media  (width >= 1240px){
+  body{
+    margin: auto;
+  }
+  header{
+    background-image: url('../img/FondoIndexDesktop.jpg');
+    height: 100vh;
+  }  
+  .container-img-condor{
+    position: absolute;
+    bottom: 50%;
+    right: 15%;
+  }
+
+ .img-condor{
+    width: 250px;
+  }
+  .img-condor:hover , .img-oso:hover{
+    cursor: pointer;
+  }
+  
+.container-img-condor .info-condor{
+  font-size: 1.2rem;
+  top: 70%;
+  right: 50%;
+}
+.container-img-condor p{
+  font-size: 1.5rem;
+  right: -350px;
+}
+ .img-oso{
+    width: 350px;
+  }
+  .container-img-oso .info-oso{
+    font-size: 1.2rem;
+    right: 45%;
+  }
+  .container-img-oso p{
+    font-size: 1.5rem;
+    top: -20%;
+    right: -100px;
+  }
+  .nav-menu{
+    width: 100%;
+    margin: auto;
+    background:none;
+    height:70px;
+    background-image: linear-gradient(#0101019f , #05050500  );
+  } 
+  .nav-menu .menu-list{
+    width: 80%;
+    margin-inline: auto;
+    flex-direction: row;
+    border-bottom: 2px solid var(--second-color);
+  }
+
+  .menu-list li a{
+    font-size: 20px;
+    font-weight: var(--font-semibold);
+  }
+  .nav-menu .closeMenu{
+    display: none;
+    visibility: hidden;
+  }
+   .container-IconMenu{
+   display: none;
+   visibility: hidden;
+  }
+  header h1{
+    width: 70%;
+    top: 10rem;
+    text-align: left;
+    font-size: 36px;
+    padding-left: 3rem;
+  }
+}
