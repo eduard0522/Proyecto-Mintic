@@ -73,10 +73,19 @@ header{
   left: 0%;
   font-size: 14px;
   display: none;
+  opacity: 0;
   width: 100%;
   text-align: center;
+  transition: all 1s forwards;
 }
-
+.container-img-condor .lineaRecta{
+  position: absolute;
+  top: 85%;
+  right: 52%;
+  display: none;
+  opacity:0;
+  transition: all 1s forwards;
+}
 .container-img-oso{
   position: absolute;
   left: 0;
@@ -92,16 +101,19 @@ header{
   top: 50%;
   right: 40%;
   display: none;
+  visibility: hidden;
   &:hover{
     cursor: pointer;
   }
 }
+
 .container-img-oso .lineaRecta{
   position: absolute;
   top: -10%;
   right: 50%;
   display: none;
-  visibility: hidden;
+  opacity:0;
+  transition: all 1s forwards;
 }
 .container-img-oso p{
   color: var(--second-color);
@@ -110,7 +122,9 @@ header{
   top: 50%;
   right: -220px;
   font-size: 14px;
+  opacity:0;
   display: none;
+  transition: all 1s forwards;
 }
 .nav-menu{
   width: 50%;
@@ -124,7 +138,6 @@ header{
   display: none;
   visibility: hidden;
 } 
-
 .nav-menu .menu-list{
   width: 100%;
   height: 100%;
@@ -135,11 +148,11 @@ header{
 }
 .menu-list li a{
   color: var(--second-color);
-  
   &:hover{
     text-decoration: underline;
   }
 }
+
 .nav-menu .closeMenu{
   position: absolute;
   top: .2rem;
@@ -171,16 +184,12 @@ header h1{
   font-weight: var(--font-semibold);
   z-index: 9;
 }
-
-
 main{
   padding: 1rem;
 }
-
 .colombia h2 span{
   color: var(--primary-dark);
   font-size: 1.7rem;
- 
 }
 .colombia p{
   color: var(--dark-color);
@@ -244,7 +253,187 @@ main{
     fill: #32b068;
   }
 }
+  .container-imgs-boyaca .img-container{
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
 
+  .container-imgs-boyaca .img-container:nth-child(2),
+  .container-imgs-boyaca .img-container:nth-child(3),
+  .container-imgs-boyaca .img-container:nth-child(4){
+    display: none;
+    visibility: hidden;
+  }
+  .container-imgs-boyaca.img-container p {
+    padding: .5rem 0;
+  }
+  .images-grid .img-container p span{
+    font-style: italic;
+  }
+  .images-grid .img-container img{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    border-radius: 1rem;
+  }
+  .images-grid .img-container i{
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    color: var(--second-color);
+  }
+  .container-cundinamarca{
+    margin-top: 1rem;
+  }
+  .container-imgs-cundinamarca .img-container{
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  .container-imgs-cundinamarca .img-container:nth-child(1),
+  .container-imgs-cundinamarca .img-container:nth-child(2),
+  .container-imgs-cundinamarca .img-container:nth-child(4){
+    display: none;
+    visibility: hidden;
+  }
+  .card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .region{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 350px;
+    background-image:url('../img/background-image.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  .region h3{
+    width: 100%;
+    padding: 2rem 2rem 1rem 0rem;
+    color: var(--second-color);
+    font-size: 1.5rem;
+    border-bottom: 2px dashed var(--second-color);
+  }
+.region p{
+    color: var(--second-color);
+    font-size: 1rem;
+}
+.region p span{
+  color: var(--primary-dark);
+  font-weight: var(--font-bold);
+}
+ .btn-see-more{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 1rem;
+  color: var(--second-color);
+  align-self: flex-end;
+  font-weight: var(--font-semibold);
+  &:hover{
+    color: var(--primary-dark);
+    cursor: pointer;
+  }
+}
+.explore-groups{
+  margin-top: 2rem;
+}
+.explore-groups .i-group{
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-left: 1rem;
+}
+.explore-groups .container-groups{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.explore-groups .group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 95%;
+  height: 100px;
+  background-image: url('../img/background-group.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: auto;
+}
+.group h3{
+  color: var(--second-color);
+  font-size: 1.5rem;
+  border-bottom: 2px dashed var(--second-color);
+  text-align: center;
+  width: 100%;
+  padding-bottom: .5rem;
+}
+.curiosities{
+  margin-top: 2rem;
+}
+.curiosities i{
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-left: .5rem;
+}
+.curiosities p{
+  margin-top: 1rem;
+  font-size: 1em;
+  font-weight: var(--font-bold);
+}
+footer{
+  background-image: url('../img/background-footer.svg');
+}
+
+.content-footer{
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-areas: "lista-1" "lista-2" "lista-3";
+}
+.content-footer ul:nth-child(1){
+  grid-area: lista-1;
+}
+.content-footer ul:nth-child(2){
+  grid-area: lista-2;
+}
+.content-footer ul:nth-child(3){
+  grid-area: lista-3;
+}
+.content-footer ul li{
+  color: var(--second-color);
+  font-size: 1rem;
+  padding: .5rem .1rem;
+  text-align: center;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+footer hr{
+  width: 80%;
+  margin: 1rem auto;
+  height: 0px;
+  border-bottom: 2px dashed var(--second-color);
+}
+footer p{
+  text-align: center;
+  font-size: 1rem;
+  color: var(--second-color);
+}
 @media(width > 359px) and (width < 620px){
   .container-img-condor{
     position: absolute;
@@ -255,8 +444,6 @@ main{
   }
 }
 
-
-
 @media  (width >= 620px) and (width < 1024px) {
   body{
     margin: auto;
@@ -266,51 +453,16 @@ main{
     height: 50vh;
   } 
   .container-img-condor{
-    bottom: 50%;
-    right: 10%;
-    &:hover{
-      p{
-        display: block;
-      }
-      .lineaRecta{
-        display: block;
-        visibility: visible;
-      }
-    }
-  } 
-
-  .container-img-oso:hover{
-    p{
-      display: block;
-    }
-    .lineaRecta{
-      display: block;
-      visibility: visible;
-      top: -5%;
-    }
-  }
-  .container-img-oso .info-oso{
-    font-size: 1.2rem;
-    right: 45%;
-    display: block;
-  }
-  .container-img-condor .info-condor{
-    font-size: 1rem; 
-    display: block;
-  }
-  .container-img-condor p{
-    font-size: 1.4rem;
+    position: absolute;
+    bottom: 200px;
+    right: 8%;
   }
  .img-condor{
     width: 200px;
+
   }
  .img-oso{
     width: 280px;
-  }
-  .container-img-oso p{
-    font-size: 1.3rem;
-    top: -15%;
-    right: -120px;
   }
   .nav-menu{
     display: block;
@@ -321,12 +473,15 @@ main{
     height:70px;
     background-image: linear-gradient(#0101019f , #05050500  );
   } 
+
   .nav-menu .menu-list{
     width: 80%;
     margin-inline: auto;
     flex-direction: row;
     border-bottom: 2px solid var(--second-color);
   }
+
+
   .menu-list li a{
     font-size: 20px;
     font-weight: var(--font-semibold);
@@ -341,10 +496,10 @@ main{
   }
   header h1{
     width: 80%;
-    top: 5rem;
+    top: 7rem;
     text-align: left;
-    font-size: 20px;
-    padding-left: 1rem;
+    font-size: 24px;
+    padding-left: 3rem;
   }
   main{
     padding: 2rem;
@@ -355,6 +510,7 @@ main{
   .colombia p{
     font-size: 1.3rem;
   }
+  
  .grid-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -364,22 +520,33 @@ main{
     display: flex;
     grid-area: catleya;
   }
+
   .grid-container .especies-colombia{
     grid-area: parrafo;
   }
+
   .grid-container .orquidea2{
     display: block;
     visibility: visible;
+  }
+  .mapaArticle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .mapaContainer {
     display: block;
     visibility: visible;
     grid-area: mapa;
+    width: 300px;
+    transform: translateY(-50px);
   }
+  
   .colombia .img-container{
     width: 45%;
     margin: 1rem auto;
   }
+
   .colombia .img-container img{
     height:auto;
   }
@@ -387,9 +554,11 @@ main{
     grid-area: chiguana;
     width: 90%;
   }
+
   .grid-container .chiguana img{
     margin: auto;
   }
+
   .grid-container .orquideas-colombia{
     display: flex;
     justify-content: center;
@@ -399,23 +568,14 @@ main{
   }
   .colombia .img-container p{
     font-size: 1.2rem;
-    font-weight: var(--font-semibold);
   } 
-  .colombia .img-container span{
-    font-style: italic;
-    color: var(--dark-color);
-  }
-  .colombia .img-container .info{
-    color: var(--second-color);
-    position: absolute;
-    bottom: 75%;
-    left: .5rem;
-  }
+
+
 }
 
 @media (width > 770){
   header h1{
-    top: 6rem;
+    top: 8rem;
     font-size: 24px;
   }
 }
@@ -434,10 +594,11 @@ main{
     &:hover{
       p{
         display: block;
+        animation: showInfo 1s ease forwards; 
       }
       .lineaRecta{
         display: block;
-        visibility: visible;
+        animation: showInfo 1s ease forwards; 
       }
     }
   }
@@ -454,20 +615,28 @@ main{
   right: 50%;
 }
 .container-img-condor p{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   right: -350px;
 }
  .img-oso{
     width: 350px;
 }
 
+
 .container-img-oso:hover{
     p{
       display: block;
+      animation: showInfo 1s ease forwards; 
     }
     .lineaRecta{
       display: block;
-      visibility: visible;
+     animation: showInfo 1s ease forwards; 
+    }
+  }
+
+  @keyframes showInfo {
+    to{
+      opacity: 1;
     }
   }
 
@@ -530,32 +699,46 @@ main{
     font-size: 3rem;
   }
   .colombia p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
   }
   .grid-container{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     grid-template-areas:
-     "parrafo parrafo mapa mapa" 
-     "catleya catleya mapa mapa" 
-     "parrafo2 parrafo2 chiguana chiguana";
+     "parrafo parrafo parrafo mapa mapa" 
+     "catleya catleya catleya mapa mapa" 
+     "parrafo2 parrafo2 parrafo2 chiguana chiguana";
   }
   .grid-container .especies-colombia{
     grid-area: parrafo;
+  
   }
-  .grid-container .mapaContainer{
+  .grid-container .mapaArticle{
     width: 100%;
-    height: auto;
     grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-70px);
+  }
+
+  .grid-container .mapaArticle .mapaContainer{
+    width: 400px;
+    height: auto;
     display: block;
     visibility: visible;
   }
+
   .grid-container .catleya{
+    display: flex;
+
     grid-area: catleya;
   }
   .grid-container .orquidea2{
-    display: none;
-    visibility: hidden;
+    display: block;
+    visibility: visible;
   }
   .grid-container .chiguana{
     grid-area: chiguana;
@@ -564,7 +747,7 @@ main{
     margin: auto;
   }
   .colombia .img-container{
-    width: 60%;
+    width: 350px;
     margin: 0rem auto;
   }
    .colombia .img-container p{
@@ -577,6 +760,10 @@ main{
     grid-area: parrafo2;
     padding: 0;
   }
+  .grid-container .orquideas-colombia p{
+    margin-top: 0;
+  }
+
   .colombia .img-container img{
     height:auto;
   }
@@ -599,7 +786,7 @@ main{
     flex-wrap: wrap;
   }
   .images-grid .img-container{
-    width: 38%;
+    width: 300px;
     margin: auto;
     position: relative;
  
@@ -775,7 +962,13 @@ footer p{
     width: 70%;
     top: 8rem;
     text-align: left;
-    font-size: 36px;
-    padding-left: 3rem;
+    font-size: 32px;
+    padding-left: 7rem;
+  }
+  .img-condor{
+    width: 300px;
+  }
+ .img-oso{
+    width: 380px;
   }
 }
