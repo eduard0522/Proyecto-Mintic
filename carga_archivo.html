@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo carga de archivo</h1>
+    <p id="especie"></p>
+    <script>
+        //identificar el archivo a cargar
+        const requestURL="ejemplodic4.json";
+        const request = new XMLHttpRequest();
+        //carga del archivo. GET es la operación para cargar una página desde una url
+        request.open("GET",requestURL);
+        request.responseType="json";
+        request.send();
+        //después de la carga del archivo
+        request.onload = function() {
+            //se cargó todo el string con el formato json, creó el objeto especie
+            const especie=request.response;
+            const nombre=especie["nombre_co"];
+            const nombre_cientif = especie["nombre_ci"];
+            document.getElementById("especie").innerHTML=nombre+"<br><em>"+nombre_cientif+"</em>";
+        }
+    </script>
+</body>
+</html>

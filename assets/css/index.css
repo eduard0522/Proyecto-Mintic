@@ -1069,4 +1069,27 @@ footer p{
  .img-oso{
     width: 380px;
   }
+  main{
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+
+
+
+@media  (width > 1600px){
+  header h1{
+    width: 60%;
+    top: 10rem;
+    text-align: left;
+    font-size: 40px;
+    padding-left: 8rem;
+  }
+  .img-condor{
+    width: 500px;
+  }
+ .img-oso{
+    width: 500px;
+  }
 }
