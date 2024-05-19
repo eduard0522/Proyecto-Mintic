@@ -162,7 +162,7 @@ header{
   position: absolute;
   top: 0rem;
   right: 0rem;
-  background-color:#0a871f8b;
+  background-color:#000000;
   border-radius: .1rem;
   display: flex;
   justify-content: center;
@@ -409,6 +409,7 @@ footer{
   grid-template-areas: "lista-1" "lista-2" "lista-3";
 }
 .content-footer ul:nth-child(1){
+  display: none;
   grid-area: lista-1;
 }
 .content-footer ul:nth-child(2){
@@ -469,23 +470,33 @@ footer p{
     width: 300px;
   }
   .nav-menu{
-    display: block;
+    display: flex;
+    justify-content: space-between;
     visibility:visible;
     width: 100%;
     margin: auto;
     background:none;
     height:70px;
-    background-image: linear-gradient(#1a7622 , #05050500  );
+    background-image: linear-gradient(#ffffff , #ffffff  );
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .nav-menu img{
+    max-width: 300px;
+    background-color: #FFFFFF;
+    margin-left: 5rem;
   } 
   .nav-menu .menu-list{
-    width: 80%;
-    margin-inline: auto;
+    width: 50%;
     flex-direction: row;
-    border-bottom: 2px solid var(--second-color);
   }
   .menu-list li a{
     font-size: 20px;
     font-weight: var(--font-semibold);
+    font-family: sans-serif;
+    color: var(--primary-color);
   }
   .nav-menu .closeMenu{
     display: none;
@@ -656,6 +667,9 @@ footer p{
   .content-footer{
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: "lista-1 lista-2 lista-3";
+  }
+  .content-footer ul:nth-child(1){
+    display: block;
   }
   .content-footer ul li{
     font-size: 1.2rem;
@@ -874,19 +888,18 @@ footer p{
 
   .grid-container .catleya{
     display: flex;
-
     grid-area: catleya;
   }
+
+  
   .grid-container .orquidea2{
     display: block;
     visibility: visible;
   }
   .grid-container .chiguana{
     grid-area: chiguana;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-self: end;
+    justify-self: end;
   }
 
   .grid-container .chiguana img{
@@ -931,7 +944,6 @@ footer p{
   }
   .container-imgs-boyaca{
     grid-area: container-images;
-  
   }
   .container-boyaca .boyaca{
     grid-area: card-boyaca;
@@ -964,6 +976,7 @@ footer p{
     color: var(--second-color);
   }
   .container-cundinamarca{
+    margin: auto;
     margin-top: 8rem;
     display: grid;
     gap: 2rem;
@@ -1093,6 +1106,7 @@ footer{
 }
 .content-footer ul:nth-child(1){
   grid-area: lista1;
+  display: block;
 }
 .content-footer ul:nth-child(2){
   grid-area: lista2;

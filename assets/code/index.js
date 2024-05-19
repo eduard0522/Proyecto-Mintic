@@ -28,3 +28,16 @@ pathBoyaca.addEventListener('mouseout', () => {
   infoBoyaca.style.display = 'none';
   infoBoyaca.style.opacity = 0;
 });
+
+
+document.addEventListener('click', (e) => {
+  if(e.target.matches('.boyaca-btn')){
+    location.href = 'boyaca.html'
+  }
+})
+
+document.addEventListener('click', (e) => {
+  if(e.target.matches('.cundinamarca-btn')){
+    location.href = 'cundinamarca.html'
+  }
+})

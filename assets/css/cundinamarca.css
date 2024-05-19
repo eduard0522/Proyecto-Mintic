@@ -293,6 +293,7 @@ main{
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  margin-top: 1rem;
 }
 
 .card img{
@@ -443,9 +444,11 @@ footer{
   grid-template-columns: 1;
   grid-template-areas: "lista-1" "lista-2" "lista-3";
 }
-
 .content-footer ul:nth-child(2){
   grid-area: lista-2;
+}
+.content-footer ul:nth-child(1){
+  display: none;
 }
 .content-footer ul:nth-child(3){
   grid-area: lista-3;
@@ -612,6 +615,7 @@ footer p{
 
 @media (width > 770) and (width < 1024 ) {
   header h1{
+    position: absolute;
     top: 8rem;
     font-size: 24px;
   }
@@ -635,6 +639,13 @@ footer p{
     background-image: url('../img/sumapaz.png');
     height: 100vh;
   } 
+  header h1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 5rem;
+    font-size: 2.3rem;
+  }
   .container-img-danta{
     bottom: 200px;
     right: 8%;
@@ -821,11 +832,11 @@ footer p{
 
 @media  (width > 1440px){
   header h1{
-    width: 70%;
-    top: 8rem;
-    text-align: left;
-    font-size: 32px;
-    padding-left: 7rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 6rem;
+    font-size: 3rem;
   }
   .img-condor{
     width: 350px;
