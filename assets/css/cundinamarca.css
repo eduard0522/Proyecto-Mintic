@@ -299,6 +299,8 @@ main{
 .container-cards{  
   width: 100%;
   position: relative;
+  margin-inline: auto;
+  justify-content: center;
 }
 .especies-cundinamarca .card{
   width: 300px;
@@ -307,6 +309,7 @@ main{
   overflow: hidden;
   position: relative;
   margin-top: 1rem;
+  margin-inline: auto;
 }
 
 .card img{
@@ -336,6 +339,12 @@ main{
   text-align: center;
   font-size: 1rem;
 }
+.card p span{
+  color: var(--second-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
 .front-card{
   width: 300px;
   transform: perspective(300px);
@@ -350,7 +359,7 @@ main{
   top: 0;
   left: 0;
   background-image: url('../img/background-image.svg');
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -511,7 +520,7 @@ footer p{
     margin: auto;
   }
   header{
-    background-image: url('../img/sumapaz.png');
+    background-image: url('../img/sumapaz2.png');
     height: 50vh;
     overflow: hidden;
   } 
@@ -821,7 +830,20 @@ footer p{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
   gap:2rem;
+  justify-content: center;
+  align-content: center;
+}
 
+.container-cards .card h3{  
+  font-size:1.3rem ;
+}
+.container-cards .card p{  
+    font-size:1.1rem ;
+}
+.container-cards .card p span{  
+  font-weight: 400;
+  font-size:1rem ;
+  color: #ffffff;
 }
 
 .explore-groups{

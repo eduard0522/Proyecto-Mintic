@@ -47,3 +47,6 @@ document.addEventListener('click', (e) => {
     document.querySelector('.nav-menu').classList.toggle('active');
   }
 })
+
+
+

@@ -247,9 +247,13 @@ main{
   border-radius: .5rem;
 }
 .container-cards{  
+  margin: auto;
   width: 100%;
   position: relative;
+  justify-content: center;
+  align-content: center;
 }
+
 .especies-cundinamarca .card{
   width: 300px;
   height: 350px;
@@ -257,6 +261,7 @@ main{
   overflow: hidden;
   position: relative;
   margin-top: 1rem;
+  margin-inline:auto ;
 }
 
 .card img{
@@ -319,8 +324,18 @@ main{
 .back-card h3{
   text-align: center;
 }
-.back-card p{
-  color: var(--second-color);
+
+.container-cards .card h3{  
+  font-size:1.3rem ;
+}
+.container-cards .card p{  
+    font-size:1.1rem ;
+    color: #ffffff;
+}
+.container-cards .card p span{  
+  font-weight: 400;
+  font-size:1rem ;
+  color: #ffffff;
 }
 
 .card:hover{
@@ -560,9 +575,12 @@ footer p{
  
   .grid-container{
     gap: 1rem;
+    justify-items: center;
+    align-content: center;
     justify-content: center;
     align-items: center;
-    grid-template-areas: 'parrafo imgs'  ;
+    grid-template-areas: 'parrafo imgs';
+
   }
   .grid-container .img-container {
    height: 250px;
@@ -586,7 +604,9 @@ footer p{
     grid-template-columns: repeat(2, minmax(300px, 350px));
     align-items: center;
     margin-inline:auto ;
-    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-inline:auto;
   }
   
   .especies-cundinamarca .card{
@@ -762,15 +782,26 @@ footer p{
   .especies-cundinamarca{
     margin-top: 2rem;
   }
-
   .container-cards{  
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
     gap:2rem;
-
+    justify-content: center;
+    align-content: center;
   }
 
+  .container-cards .card h3{  
+    font-size:1.3rem ;
+  }
+  .container-cards .card p{  
+      font-size:1.1rem ;
+  }
+  .container-cards .card p span{  
+    font-weight: 400;
+    font-size:1rem ;
+    color: #ffffff;
+}
   .explore-groups{
     margin-top: 4rem;
   }
