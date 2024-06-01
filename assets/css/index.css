@@ -116,7 +116,7 @@ header{
   width: 80%;
   background-image: url('../img/background-image.svg');
   background-size: cover;
-  height: 400px;
+  height: 450px;
   border-radius:  0 0 .5rem ;
   overflow: hidden;
   z-index: 10;
@@ -126,6 +126,18 @@ header{
   transition: all .8s;
   opacity: 0;
 } 
+
+.nav-menu .list-regions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-regions li{
+  text-align: center;
+  margin-top: 2rem;
+}
 
 .nav-menu img{
   display: block;
@@ -137,6 +149,7 @@ header{
   transition: all .8s;
   opacity: 1;
 }
+
 .nav-menu .menu-list{
   width: 100%;
   height: 100%;
@@ -495,7 +508,9 @@ footer p{
     top: 0;
     left: 0;
     opacity: 1;
+    overflow: visible;
   }
+
   .nav-menu img{
     max-width: 300px;
     background-color: #FFFFFF;
@@ -506,12 +521,43 @@ footer p{
     flex-direction: row;
     padding: 0;
   }
+
   .menu-list li a{
     font-size: 20px;
-    font-weight: var(--font-semibold);
-    font-family: sans-serif;
     color: var(--primary-color);
+    font-weight: var(--font-semibold);
   }
+
+  .nav-menu .list-regions{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    &:hover{
+      ul{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+.nav-menu .list-regions ul{
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem;
+    top: 1.5rem;
+    z-index: 10;
+    border-radius: 0 0 .5rem .5rem;
+    visibility: hidden;
+    opacity: 0;
+
+    &hover{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
   .nav-menu .closeMenu{
     display: none;
     visibility: hidden;
@@ -781,23 +827,55 @@ footer p{
     top: 0;
     left: 0;
     opacity: 1;
+    z-index: 10;
+    overflow: visible;
   }
+
   .nav-menu img{
     max-width: 300px;
     background-color: #FFFFFF;
     margin-left: 5rem;
   } 
   .nav-menu .menu-list{
-    width: 40%;
+    width: 50%;
     flex-direction: row;
     padding: 0;
   }
   .menu-list li a{
     font-size: 20px;
-    font-weight: var(--font-semibold);
-    font-family: sans-serif;
     color: var(--primary-color);
+    font-weight: var(--font-semibold);
   }
+
+  .nav-menu .list-regions{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 10;
+      background-color: #fff;
+      &:hover{
+        ul{
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  
+  .nav-menu .list-regions ul{
+      position: absolute;
+      background-color: #fff;
+      padding: 1rem;
+      top: 1.5rem;
+      z-index: 10;
+      border-radius: 0 0 .5rem .5rem;
+      visibility: hidden;
+      opacity: 0;
+
+      &hover{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   .nav-menu .closeMenu{
     display: none;
     visibility: hidden;
@@ -1152,7 +1230,7 @@ footer p{
     width: 400px;
   }
   main{
-    max-width: 90%;
+    max-width: 95%;
     margin: auto;
   }
   

@@ -4,6 +4,9 @@ const infoBoyaca = document.querySelector('.info-boyaca');
 const infoCundinamarca = document.querySelector('.info-cundinamarca');
 
 
+
+// Muestra la información de la región al pasar el mouse por el mapa.
+
 pathBoyaca.addEventListener('mouseover', () => {
   if(screen.width > 1024){
     infoBoyaca.style.display = 'block';
@@ -30,6 +33,12 @@ pathBoyaca.addEventListener('mouseout', () => {
 });
 
 
+
+
+
+
+// Escuchadores de eventos
+
 document.addEventListener('click', (e) => {
   if(e.target.matches('.boyaca-btn')){
     location.href = 'boyaca.html'
@@ -45,6 +54,19 @@ document.addEventListener('click', (e) => {
   }
   if(e.target.matches('.closeMenu')){
     document.querySelector('.nav-menu').classList.toggle('active');
+  }
+
+  if(e.target.matches('.paisajes')){
+    localStorage.setItem('filtro', 'paisaje')
+    location.href  = "./grupos.html"
+  }
+  if(e.target.matches('.plantas')){
+    localStorage.setItem('filtro', 'flora')
+    location.href  = "./grupos.html"
+  }
+  if(e.target.matches('.animales')){
+    localStorage.setItem('filtro', 'animal')
+    location.href  = "./grupos.html"
   }
 })
 

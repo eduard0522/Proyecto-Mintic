@@ -1,52 +1,42 @@
 const d =  document
 let containerCards = d.querySelector('.container-cards')
+import { cardHtml } from "./card.js";
+import { getDataJson } from "./peticiones.js";
+  
 
-    async function getDataJson() {
-      const url = 'datos.json'
-      const res = await  fetch(url);
-      const dataJson = await res.json();
-      return dataJson
-    }
- async function FilterDataJson() {
-      let data = await getDataJson()
-      for(let especie of data) {
-          let habitatLoweCase = especie.Habitat.toLowerCase();
-          let textFilter = habitatLoweCase.includes('cundinamarca') 
-          if(textFilter) {
-            let  cardHtml = `
-                <div class="card">
-                  <div class="front-card">
-                    <img src="${especie.Imagen}" alt="foto uñakusma">
-                    <div class="container-dates">
-                      <h3>${especie.Nombre_Comun}</h3>
-                      <hr>
-                      <p><em> ${especie.Nombre_Cientifico}</em></p>
-                    </div>
-                  </div>
-
-                  <div class="back-card" >
-                    <h3>Boyacá</h3>
-                    <p>Nombre comun: <span> ${especie.Nombre_Comun}</span> </p>
-                    <p>Nombre cientifico: <span> <em> ${especie.Nombre_Cientifico}  </em> </span> </p>
-                    <p>Especie : <span> ${especie.Tipo} </span> </p>
-                    <p>Ubicación: <span> ${especie.Habitat} </span>   </p>
-                    <p>Latitud : <span>  ${especie.Latitud} </span>  </p>
-                    <p>Longitud : <span> ${especie.Longitud} </span> </p>
-                    <a target='_blank' href="${especie.direccion_web}"> 
-                      <div class="btn-see-more">
-                        <span> Ver mas </span>
-                        <i class="bi bi-arrow-right"></i>
-                      </div>
-                    </a>
-                    
-                  </div>
-              </div>
-            `
-            containerCards.innerHTML += cardHtml
-          }
+async function FilterDataJson() {
+  try {
+    let data = await getDataJson()
+    for(let especie of data) {
+      let habitatLoweCase = especie.Habitat.toLowerCase();
+      let textFilter = habitatLoweCase.includes('cundinamarca') 
+      if(textFilter) {
+          containerCards.innerHTML += cardHtml(especie)
       }
+    }
+  } catch (error) {
+    containerCards.innerHTML = "<h2> Lo sentimos, ocurrio un error al obtener los datos. </h2>"
   }
+    
+}
+
+  // Escuchadores de eventos
 
 d.addEventListener('DOMContentLoaded' , (e) => {
   FilterDataJson()
+});
+
+d.addEventListener("click" , (e) => {
+  if(e.target.matches('.paisajes')){
+    localStorage.setItem('filtro', 'paisaje')
+    location.href  = "./grupos.html"
+  }
+  if(e.target.matches('.plantas')){
+    localStorage.setItem('filtro', 'flora')
+    location.href  = "./grupos.html"
+  }
+  if(e.target.matches('.animales')){
+    localStorage.setItem('filtro', 'animal')
+    location.href  = "./grupos.html"
+  }
 })
